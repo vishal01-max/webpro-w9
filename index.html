@@ -5,18 +5,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 9 - Web Programming</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            color: #eaf0ff;
+            background:
+                radial-gradient(circle at top left, #263b70, transparent 45%),
+                linear-gradient(135deg, #0b1020, #151d35 60%, #101827);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 720px;
+            padding: 55px 45px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(14px);
+            animation: appear 0.8s ease;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 18px;
+            margin-bottom: 25px;
+            border-radius: 30px;
+            color: #9cc5ff;
+            background: rgba(70, 130, 255, 0.15);
+            border: 1px solid rgba(120, 170, 255, 0.3);
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(30px, 5vw, 43px);
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            color: #83b5ff;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            color: #c0cbe0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .detail-card {
+            padding: 20px 12px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+        }
+
+        .detail-card span {
+            display: block;
+            color: #91a5c9;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 9px;
+        }
+
+        .detail-card strong {
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .message {
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.13);
+            color: #aebbd2;
+            font-size: 15px;
+        }
+
+        footer {
+            margin-top: 35px;
+            color: #7888a5;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 40px 22px;
+            }
+
+            .details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Welcome to My Week 9 Project</h1>
+    <main class="container">
 
-    <h2> Bohara Vishal </h2>
+        <div class="tag">Web Programming • Week 09</div>
 
-    <p>Course: Web Programming</p>
+        <h1>Welcome to My Week 9 Project</h1>
 
-    <p>Date: November 10, 2026</p>
+        <h2>Vishal Bohara</h2>
 
-    <p>This is my Week 9 GitHub homework.</p>
+        <p class="description">
+            Welcome to my Week 9 GitHub homework project.
+            This page demonstrates my practice with HTML,
+            CSS, Git, GitHub, and GitHub Pages.
+        </p>
+
+        <section class="details">
+            <div class="detail-card">
+                <span>Course</span>
+                <strong>Web Programming</strong>
+            </div>
+
+            <div class="detail-card">
+                <span>Submission Date</span>
+                <strong>November 10, 2026</strong>
+            </div>
+        </section>
+
+        <p class="message">
+            This is my Week 9 GitHub homework.
+            Learning, building, and improving one step at a time.
+        </p>
+
+        <footer>
+            © 2026 • WEEK 09 PROJECT
+        </footer>
+
+    </main>
 
 </body>
 </html>
